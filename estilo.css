@@ -276,7 +276,7 @@ header ul li a:hover::after {
 }
 
 /* SECCION RESPONSIVE */
-@media screen and (max-width: 1050px) {
+@media  (max-width: 1050px) {
   .contenedor {
     display: block;
   }
@@ -291,7 +291,7 @@ header ul li a:hover::after {
     margin: auto;
     border: 1px solid #666;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     transition: 0.3s;
   }
   .contenedor .contenedor-items .item .img-item {
@@ -300,7 +300,7 @@ header ul li a:hover::after {
   }
   .contenedor .contenedor-items .item .titulo-item {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
     text-align: center;
     text-transform: uppercase;
