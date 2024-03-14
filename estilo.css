@@ -305,6 +305,9 @@ header ul li a:hover::after {
     text-align: center;
     text-transform: uppercase;
 }
+footer {
+  height: 112vh;
+ }
 }
 
 /* FOOTER */
@@ -379,7 +382,5 @@ footer {
   .social {
     font-size: 3vh;
   }
- footer {
-  height: 112vh;
- }
+ 
 }
