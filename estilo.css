@@ -295,7 +295,7 @@ header ul li a:hover::after {
     /* width: 60%; */
     width: 100%;
     transition: 0.3s;
-    padding: 12px;
+    padding: 15px;
   }
   .contenedor .contenedor-items .item .img-item {
     width: 100%;
