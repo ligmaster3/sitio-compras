@@ -18,12 +18,15 @@ body {
 
 header .navbar {
   z-index: 1000;
-  background-color: rgb(44, 233, 66); /* Color predeterminado */
-  transition: background-color 0.3s ease; /* Agrega una transición suave */
+  background-color: rgb(44, 233, 66);
+  /* Color predeterminado */
+  transition: background-color 0.3s ease;
+  /* Agrega una transición suave */
 }
 
 .nav-color-change {
-  background-color: #7e0a0a !important; /* Cambia el color del menú */
+  background-color: #ce2c2c !important;
+  /* Cambia el color del menú */
 }
 
 
@@ -56,6 +59,7 @@ header .navbar {
 .wrap-hero-section h1 {
   position: absolute;
 } */
+
 /* Responsive */
 @media (max-width: 998px) {
   header {
@@ -71,29 +75,101 @@ header .navbar {
   margin: auto;
   width: 100%;
 }
+
 /* productos */
 .product-container {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 2rem ;
 }
+
 .product-container .product {
   width: 150px;
+  border: solid 1px brown;
 }
+
 .product-container .product-img {
   width: 100%;
   height: 250px;
   border: solid 1px #7e0a0a;
   object-fit: cover;
 }
+
 .product-container .product-title {
-font-size: 15px;
-font-weight: bold;
-/* color: azure; */
-margin: 0.8rem;
+  font-size: 15px;
+  font-weight: bold;
+  /* color: azure; */
+  margin: 0.8rem;
 }
+
 .product-container .product-price {
   font-size: 14px;
   /* color: blueviolet; */
+}
+
+/*  */
+.cart-conteiner {
+  margin-top: 3rem !important;
+}
+.cart-title {
+  margin: 1.5rem 0;
+}
+.shop-box {
+  display: grid;
+  grid-template-columns: 25% 49% 25%;
+  align-items: center;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.427);
+}
+#shopItems {
+  display: grid;
+  row-gap: 1rem;
+}
+.shop-item {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+}
+
+.shop-box .shop-img {
+  width: 100px;
+  height: 130px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.detail-box {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.detail-box .shop-product {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.detail-box .shop-price {
+  font-weight: 500;
+  font-weight: bold;
+}
+
+.cart-quantity {
+  border: transparent;
+  text-align: center;
+  width: 2rem;
+  font-size: 1rem;
+}
+
+.cart-remove {
+  color: red;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  width: 50px;
+  background: transparent;
+  margin-left: 133px;
 }
