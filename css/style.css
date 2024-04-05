@@ -16,14 +16,16 @@ body {
   text-align: center;
 }
 
-
-.sticky-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
+header .navbar {
   z-index: 1000;
-  background-color: black;
+  background-color: rgb(44, 233, 66); /* Color predeterminado */
+  transition: background-color 0.3s ease; /* Agrega una transición suave */
 }
+
+.nav-color-change {
+  background-color: #7e0a0a !important; /* Cambia el color del menú */
+}
+
 
 .logo {
   display: block;
@@ -40,6 +42,9 @@ body {
   font-size: 22px;
 }
 
+.navbar-collapse {
+  justify-content: space-between;
+}
 
 /* .wrap-hero-section {
   position: relative;
