@@ -1,21 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.querySelector(".navbar-toggler");
-    const dropdown = document.querySelector(".sub-menu");
-  
-    toggleBtn.addEventListener("click", () => {
-      dropdown.classList.toggle("open");
-    });
-  
-    $(document).ready(function () {
-      $(window).scroll(function () {
-        if ($(window).scrollTop() > $("#header").height()) {
-          $("#navbar").addClass("sticky-nav"); // Reemplaza 
-        } else {
-          $("#navbar").removeClass("sticky-nav"); // Elimina 
-         
-        }
-      });
-    });
+$(document).ready(function() {
+  $(window).scroll(function() {
+      if ($(this).scrollTop() > 0.7 * $(window).height()) { // Verifica si el desplazamiento es mayor a 70vh
+          $('#navbar').addClass('nav-color-change'); // Agrega la clase para cambiar el color
+      } else {
+          $('#navbar').removeClass('nav-color-change'); // Elimina la clase para restaurar el color predeterminado
+      }
   });
-
-  
+});
