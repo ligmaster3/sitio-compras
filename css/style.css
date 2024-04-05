@@ -14,6 +14,7 @@ body {
   justify-content: center;
   text-align: center;
 }
+
 header {
   background-color: rgba(34, 34, 182, 0.332);
   background: url("https://i1.wp.com/www.24symbols.com/24stories/wp-content/uploads/2019/12/BestOf2019_es.png?fit=1170%2C686&ssl=1");
@@ -23,9 +24,11 @@ header {
   align-items: center;
   min-height: 100vh;
 }
+
 header {
   position: relative;
 }
+
 header .nav-bar {
   background-color: #fff;
   position: fixed;
@@ -40,6 +43,7 @@ header .nav-bar {
   justify-content: space-between;
   transition: background-color 0.3s ease;
 }
+
 .sticky-nav {
   position: fixed;
   top: 0;
@@ -52,6 +56,7 @@ header .nav-bar {
   font-weight: bold;
   font-size: 22px;
 }
+
 .nav-bar .logo a {
   color: rgb(0, 18, 123);
   list-style: none;
@@ -69,6 +74,7 @@ header .nav-bar .links {
   align-items: center;
   margin-bottom: 0;
 }
+
 header ul li a {
   color: rgb(0, 0, 0);
   display: block;
@@ -79,15 +85,18 @@ header ul li a {
   position: relative;
   text-decoration: none;
 }
+
 header .nav-bar .links li a:hover {
   color: gold;
 }
+
 .navbar-toggler {
   cursor: pointer;
   color: white;
   font-size: 1.3rem;
   display: none;
 }
+
 .sub-menu {
   display: none;
   position: absolute;
@@ -101,36 +110,44 @@ header .nav-bar .links li a:hover {
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .sub-menu.open {
   height: 240px;
 }
+
 .sub-menu li {
   padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.wrap-hero-section {
+
+/* .wrap-hero-section {
   position: relative;
   margin: 0 auto;
+  padding: 3rem;
+  top: 600%;
+  right: 36%;
 }
 .wrap-hero-section h1 {
   position: absolute;
-  
-}
+} */
 /* Responsive */
 @media (max-width: 998px) {
   header {
     width: 100%;
   }
+
   header .nav-bar .links {
     display: none;
   }
+
   .navbar-toggler {
     display: block;
     cursor: pointer;
     left: 1vh;
   }
+
   .sub-menu {
     display: block;
     background-color: transparent;
@@ -140,6 +157,7 @@ header .nav-bar .links li a:hover {
     visibility: visible;
   }
 }
+
 @media (max-width: 576px) {
   .sub-menu {
     top: 66px;
