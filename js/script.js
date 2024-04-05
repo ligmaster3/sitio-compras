@@ -1,6 +1,6 @@
 // fetch('js/productos.json')
 // .then(response => response.json())
-// .then(data => cargarProductos(data))
+// .then(data => mostrarProductos(data))
 // .catch(error => console.log(error));
 const productos = [
     { id: 1, title: "Producto 1", price: 0, img: "https://images.thalia.media/-/BF2000-2000/083e7d2e81b0453a87e87f51d37d8ead/harry-potter-y-la-piedra-filosofal-epub-j-k-rowling.jpeg.jpg", categoria: "Electrónica" },
