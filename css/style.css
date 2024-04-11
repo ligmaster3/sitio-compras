@@ -48,6 +48,14 @@ header .navbar {
 .navbar-collapse {
   justify-content: space-between;
 }
+.sub-{
+  display: grid;
+  align-items: center;
+}
+.nav .nav-link{
+  align-items: center;
+  margin-right: 6rem;
+}
 
 /* .wrap-hero-section {
   position: relative;
@@ -117,7 +125,7 @@ header .navbar {
 }
 .shop-box {
   display: grid;
-  grid-template-columns: 25% 49% 25%;
+  grid-template-columns: 17% 50% 25%;
   align-items: center;
   margin-top: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.427);
