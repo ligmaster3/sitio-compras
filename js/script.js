@@ -103,6 +103,10 @@ function comprasProductos() {
     }
 
 }
+function calcularTotal (){
+    const totalCalculado = cart.reduce((acc,item) => acc + (item.price * item.quantity),0);
+    cartTotal.textContent = `$${totalCalculado}`;
+}
 
 if (window.location.pathname.includes("compras.html")) {
     comprasProductos();
