@@ -72,7 +72,7 @@ function removcart(event) {
     const productId = parseInt(event.target.dataset.id);
     cart = cart.filter((item) => item.id !== productId);
     comprasProductos();
-    mostrarProductos();
+    saveStorage();
     
 }
 function saveStorage() {
