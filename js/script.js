@@ -81,6 +81,7 @@ function saveStorage() {
 
 function comprasProductos() {
     if (shopItemlist) {
+        shopItemlist.innerHTML = '';
         shopItemlist.innerHTML = cart.map((item) => `
             <div class="shop-box">
                 <img class="shop-img" src="${item.img}" alt="${item.title}">
@@ -95,10 +96,10 @@ function comprasProductos() {
         `).join("");
     }
     // Evento para vaciar uno de los elementos
-    const removebtns = document.getElementsByClassName('card-remove');
+    const removebtns = document.getElementsByClassName('cart-remove');
     for (let i = 0; i < removebtns.length; i++) {
-        const removebtns = removebtns[i];
-        removebtns.addEventListener('click',removcart);
+        const removebtn = removebtns[i];
+        removebtn.addEventListener('click',removcart);
     }
 
 }
