@@ -50,11 +50,14 @@ header .navbar {
 }
 
 .sub- {
-  display: grid;
+ display: flex;
   align-items: center;
 }
-
-.nav .nav-link {
+.nav {
+  justify-content: space-between;
+  margin-left: 2px;
+}
+.nav .nav-item {
   align-items: center;
   margin-right: 6rem;
 }
@@ -149,7 +152,7 @@ header .navbar {
 
 .shop-box {
   display: grid;
-  grid-template-columns: 17% 50% 25%;
+  grid-template-columns: 15% 50% 25%;
   align-items: center;
   margin-top: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.427);
@@ -210,10 +213,38 @@ header .navbar {
   margin-left: 133px;
 }
 
-.total-container {
+
+.summary {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.summary h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.total {
   text-align: right;
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
   padding: 10px;
   margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.pagocheck-btn {
+  background-color: #f87171;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.pagocheck-btn:hover {
+  background-color: #ef4444;
 }
