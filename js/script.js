@@ -27,7 +27,7 @@ function mostrarProductos() {
                 <img src="${product.img}" alt="${product.title}" class="product-img">
                 <div class="product-info">
                     <h2 class="product-title">${product.title}</h2>
-                    <p class="product-price">${product.price}</p>
+                    <p class="product-price">$${product.price}</p>
                     <a class="btn btn-primary card-btn-shop" data-id="${product.id}">Add to cart</a>
                 </div>
             </div>
