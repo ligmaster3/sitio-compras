@@ -66,13 +66,16 @@ function addToCart(event) {
         console.log(`Producto "${product.title}" añadido al carrito`);
         comprasProductos(); // Actualiza solo el carrito
         saveStorage();
+        calcularTotal();
     }
 }
 function removcart(event) {
     const productId = parseInt(event.target.dataset.id);
     cart = cart.filter((item) => item.id !== productId);
     comprasProductos();
+    mostrarProductos();
     saveStorage();
+    calcularTotal();
     
 }
 function saveStorage() {
@@ -107,6 +110,7 @@ function calcularTotal (){
     const totalCalculado = cart.reduce((acc,item) => acc + (item.price * item.quantity),0);
     cartTotal.textContent = `$${totalCalculado}`;
 }
+
 
 if (window.location.pathname.includes("compras.html")) {
     comprasProductos();
