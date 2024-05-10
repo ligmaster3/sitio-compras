@@ -81,8 +81,13 @@ header .navbar {
   .cart-conteiner .sub- {
     display: none;
   }
-
+   .shop-item {
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+  }
+  
   .shop-box {
+    max-width: 1000px;
+    width: 390px;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: .625rem;
@@ -101,7 +106,7 @@ header .navbar {
     content: "Precio:";
     display: inline;
   }
-  .cart-remove {
+  .shop-box .cart-remove {
     display: contents;
   }
 }
@@ -173,6 +178,7 @@ header .navbar {
 .shop-item {
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr;
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid #fff;
   padding-bottom: 10px;
