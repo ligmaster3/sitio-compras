@@ -9,9 +9,9 @@ const productos = [
     { id: 3, title: "Producto 3", price: 3, img: "https://www.getnoticedbranding.co.uk/uploads/3/6/4/1/3641668/img-logo_orig.jpg", categoria: "Hogar" },
     { id: 4, title: "Producto 4", price: 44, img: "https://th.bing.com/th/id/R.c6aaef46bcac9425fcdd7263ddc8cdf0?rik=oM61CMSC9oH2qA&pid=ImgRaw&r=0", categoria: "Electrónica" },
     { id: 5, title: "Producto 5", price: 45, img: "https://world-schools.com/es/wp-content/uploads/sites/11/2023/05/IMG-Academy-cover-WS.webp", categoria: "Moda" },
-    { id: 6, title: "Producto 6", price: 5, img: "https://mywowo.net/media/images/cache/dubai_img_worlds_of_adventure_01_presentazione_jpg_1200_630_cover_85.jpg", categoria: "Hogar" },
+    { id: 6, title: "Producto 6", price: 5.45, img: "https://mywowo.net/media/images/cache/dubai_img_worlds_of_adventure_01_presentazione_jpg_1200_630_cover_85.jpg", categoria: "Hogar" },
     { id: 7, title: "Producto 7", price: 6, img: "https://www.imgcorporations.com/images/bg-img.jpg", categoria: "Electrónica" },
-    { id: 8, title: "Producto 8", price: 7, img: "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/d2/d9/1e/d2d91ece-d9a9-0453-d809-82508f4c641d/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png", categoria: "Moda" },
+    { id: 8, title: "Producto 8", price: 7.33, img: "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/d2/d9/1e/d2d91ece-d9a9-0453-d809-82508f4c641d/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png", categoria: "Moda" },
     { id: 9, title: "Producto 9", price: 8, img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/MLS_crest_logo_RGB_gradient.svg/800px-MLS_crest_logo_RGB_gradient.svg.png", categoria: "Hogar" },
     { id: 10, title: "Producto 10", price: 76, img: "https://world-schools.com/es/wp-content/uploads/sites/11/2023/05/IMG-Academy-cover-WS.webp", categoria: "Electrónica" }
 ];
@@ -114,14 +114,16 @@ function calcularTotal() {
     subtotal.textContent = `$${subtotalValue}`;
   
     const itbms = document.querySelector('#ITBMS');
-    const itbmsValue = subtotalValue * 0.07; // 7% ITBMS
+    const itbmsValue = subtotalValue * 0.7; // 7% ITBMS
     itbms.textContent = `$${itbmsValue}`;
   
     const total = document.querySelector('#Total');
     const totalValue = subtotalValue + itbmsValue;
     total.textContent = `$${totalValue}`;
+    
 }
 calcularTotal();
+
 if (window.location.pathname.includes("compras.html")) {
     comprasProductos();
 } else {
