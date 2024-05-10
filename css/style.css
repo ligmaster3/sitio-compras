@@ -78,38 +78,9 @@ header .navbar {
     width: 100%;
   }
 
-  .cart-conteiner .sub- {
-    display: none;
-  }
-
-
-  .shop-box {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .625rem;
-    padding-bottom: .625rem;
-  }
-
-  .shop-box .detail-box {
-    margin-left: 44px;
-    display: block;
-  }
-
-  .shop-box .shop-img {
-    max-height: 4.875rem;
-    min-height: 4.875rem;
-    min-width: 4.875rem;
-    max-width: 4.875rem;
-  }
-
-  .shop-price::before {
-    content: "Precio:";
-    display: inline;
-  }
-
-  .shop-box .cart-remove {
-    margin-left: 50px;
-    /* display: contents; */
+  main img {
+    width: 200px;
+    height: 300px;
   }
 }
 
@@ -151,6 +122,9 @@ header .navbar {
 .product-container .product-price {
   font-size: 14px;
   /* color: blueviolet; */
+}
+.product-price::before{
+  content: 'Precio: ';
 }
 
 /*  */
@@ -212,7 +186,7 @@ header .navbar {
 .cart-quantity {
   border: transparent;
   text-align: center;
-  width: 2rem;
+  width: 3rem;
   font-size: 1rem;
 }
 
@@ -225,7 +199,6 @@ header .navbar {
   background: transparent;
   margin-left: 13rem;
 }
-
 
 .summary {
   padding: 14px;
@@ -263,4 +236,44 @@ header .navbar {
 
 .pagocheck-btn:hover {
   background-color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 998px) {
+  header {
+    width: 100%;
+  }
+
+  .cart-conteiner .sub- {
+    display: none;
+  }
+
+  .shop-box {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+  }
+
+  .shop-box .detail-box {
+    margin-left: 44px;
+    display: block;
+  }
+
+  .shop-box .shop-img {
+    max-height: 4.875rem;
+    min-height: 4.875rem;
+    min-width: 4.875rem;
+    max-width: 4.875rem;
+  }
+
+  .shop-price::before {
+    content: "Precio: ";
+    display: inline;
+  }
+
+  .shop-box .cart-remove {
+    margin-left: 50px;
+    /* display: contents; */
+  }
 }
