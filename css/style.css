@@ -48,11 +48,13 @@ header .navbar {
 .navbar-collapse {
   justify-content: space-between;
 }
-.sub-{
+
+.sub- {
   display: grid;
   align-items: center;
 }
-.nav .nav-link{
+
+.nav .nav-link {
   align-items: center;
   margin-right: 6rem;
 }
@@ -74,6 +76,26 @@ header .navbar {
     width: 100%;
   }
 
+  .cart-conteiner .sub- {
+    display: none;
+  }
+
+  .total-container {
+    font-size: 14px;
+  }
+
+  .shop-box .detail-box {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .shop-box .shop-img {
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+  }
 }
 
 
@@ -89,7 +111,7 @@ header .navbar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-top: 2rem ;
+  margin-top: 2rem;
 }
 
 .product-container .product {
@@ -120,21 +142,26 @@ header .navbar {
 .cart-conteiner {
   margin-top: 3rem !important;
 }
+
 .cart-title {
   margin: 1.5rem 0;
 }
+
 .shop-box {
   display: grid;
   grid-template-columns: 17% 50% 25%;
   align-items: center;
   margin-top: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.427);
-  border-bottom:  1px solid gray;
+  border-bottom: 1px solid gray;
+  border: 1px solid #dee2e6;
 }
+
 #shopItems {
   display: grid;
   row-gap: 1rem;
 }
+
 .shop-item {
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr;
@@ -146,8 +173,8 @@ header .navbar {
 .shop-box .shop-img {
   width: 100px;
   height: 130px;
-  object-fit: contain;
   padding: 10px;
+  border: 1px solid #dee2e6;
 }
 
 .detail-box {
@@ -181,4 +208,12 @@ header .navbar {
   width: 50px;
   background: transparent;
   margin-left: 133px;
+}
+
+.total-container {
+  text-align: right;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  margin-bottom: 20px;
 }
