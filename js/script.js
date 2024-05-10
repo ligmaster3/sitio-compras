@@ -64,6 +64,7 @@ function addToCart(event) {
         event.target.textContent = 'Añadido'; // Muestra el texto al presionar
         console.log(`Producto "${product.title}" añadido al carrito`);
         comprasProductos(); // Actualiza solo el carrito
+        mostrarProductos();
         saveStorage();
         calcularTotal();
     }
@@ -75,13 +76,10 @@ function removcart(event) {
     mostrarProductos();
     saveStorage();
     calcularTotal();
-    
-    
 }
 function saveStorage() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
-
 
 function comprasProductos() {
     if (shopItemlist) {
@@ -103,25 +101,25 @@ function comprasProductos() {
     const removebtns = document.getElementsByClassName('cart-remove');
     for (let i = 0; i < removebtns.length; i++) {
         const removebtn = removebtns[i];
-        removebtn.addEventListener('click',removcart);
+        removebtn.addEventListener('click', removcart);
+
     }
 
 }
 // Calculate subtotal, ITBMS, and total
 function calcularTotal() {
-    const subtotal = document.querySelector('#Subtotal');
     const subtotalValue = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    const subtotal = document.querySelector('#subtotal');
     subtotal.textContent = `$${subtotalValue}`;
   
-    const itbms = document.querySelector('#ITBMS');
-    const itbmsValue = subtotalValue * 0.7; // 7% ITBMS
+    const itbmsValue = subtotalValue * 0.07;
+    const itbms = document.querySelector('#itbms');
     itbms.textContent = `$${itbmsValue}`;
   
-    const total = document.querySelector('#Total');
     const totalValue = subtotalValue + itbmsValue;
+    const total = document.querySelector('#total');
     total.textContent = `$${totalValue}`;
-    
-}
+  }
 calcularTotal();
 
 if (window.location.pathname.includes("compras.html")) {
@@ -129,3 +127,5 @@ if (window.location.pathname.includes("compras.html")) {
 } else {
     mostrarProductos();
 }
+
+
