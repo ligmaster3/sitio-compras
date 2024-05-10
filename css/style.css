@@ -81,33 +81,35 @@ header .navbar {
   .cart-conteiner .sub- {
     display: none;
   }
-   .shop-item {
-    grid-template-columns: 0.3fr 1fr 0.3fr;
-  }
-  
+
+
   .shop-box {
-    max-width: 1000px;
-    width: 390px;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: .625rem;
     padding-bottom: .625rem;
   }
-  .shop-box .detail-box{
+
+  .shop-box .detail-box {
+    margin-left: 44px;
     display: block;
   }
+
   .shop-box .shop-img {
     max-height: 4.875rem;
     min-height: 4.875rem;
     min-width: 4.875rem;
     max-width: 4.875rem;
   }
-  .shop-price::before{
+
+  .shop-price::before {
     content: "Precio:";
     display: inline;
   }
+
   .shop-box .cart-remove {
-    display: contents;
+    margin-left: 50px;
+    /* display: contents; */
   }
 }
 
@@ -162,7 +164,7 @@ header .navbar {
 
 .shop-box {
   display: grid;
-  grid-template-columns: 16% 50% 25%;
+  grid-template-columns: 16% 52% 25%;
   align-items: center;
   margin-top: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.427);
