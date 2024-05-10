@@ -106,8 +106,69 @@
   <button class="pagocheck-btn">PROCEEDER AL PAGO</button>
 </div>
 
-  
   </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cartItems = document.querySelectorAll(".shop-box");
+      const subtotalElement = document.querySelector(".summary .flex:nth-child(2) span:last-child");
+      const itbmsElement = document.querySelector(".summary .flex:nth-child(3) span:last-child");
+      const totalElement = document.querySelector(".summary .total span:last-child");
+      const proceedButton = document.querySelector(".pagocheck-btn");
+  
+      // Función para calcular el subtotal
+      function calculateSubtotal() {
+        let subtotal = 0;
+        cartItems.forEach(item => {
+          const price = parseFloat(item.querySelector(".shop-price").innerText.slice(1)); // Extrae el precio y elimina el signo "$"
+          const quantity = parseInt(item.querySelector(".cart-quantity").value);
+          subtotal += price * quantity;
+        });
+        return subtotal;
+      }
+  
+      // Función para calcular el ITBMS (Impuesto sobre la Transferencia de Bienes Muebles y Servicios)
+      function calculateITBMS(subtotal) {
+        const itbmsRate = 0.07; // Tasa de ITBMS (7%)
+        return subtotal * itbmsRate;
+      }
+  
+      // Función para actualizar los valores del resumen
+      function updateSummary() {
+        const subtotal = calculateSubtotal();
+        const itbms = calculateITBMS(subtotal);
+        const total = subtotal + itbms;
+  
+        subtotalElement.textContent = subtotal.toFixed(2); // Limita el subtotal a 2 decimales
+        itbmsElement.textContent = itbms.toFixed(2); // Limita el ITBMS a 2 decimales
+        totalElement.textContent = total.toFixed(2); // Limita el total a 2 decimales
+      }
+  
+      // Evento para actualizar el resumen cuando cambia la cantidad de un artículo en el carrito
+      cartItems.forEach(item => {
+        const quantityInput = item.querySelector(".cart-quantity");
+        quantityInput.addEventListener("change", updateSummary);
+      });
+  
+      // Evento para actualizar el resumen cuando se elimina un artículo del carrito
+      const removeButtons = document.querySelectorAll(".cart-remove");
+      removeButtons.forEach(button => {
+        button.addEventListener("click", function() {
+          button.parentElement.remove();
+          updateSummary();
+        });
+      });
+  
+      // Evento para proceder al pago
+      proceedButton.addEventListener("click", function() {
+        // Aquí puedes agregar la lógica para proceder al pago
+        alert("Proceder al pago...");
+      });
+  
+      // Calcula el resumen inicial al cargar la página
+      updateSummary();
+    });
+  </script>
+  
 
 </body>
 
