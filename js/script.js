@@ -77,6 +77,7 @@ function removcart(event) {
     saveStorage();
     calcularTotal();
     
+    
 }
 function saveStorage() {
     localStorage.setItem('cart', JSON.stringify(cart));
