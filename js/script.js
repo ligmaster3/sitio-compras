@@ -109,15 +109,15 @@ function comprasProductos() {
 // Calculate subtotal, ITBMS, and total
 function calcularTotal() {
     const subtotalValue = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-    const subtotal = document.querySelector('#subtotal');
+    const subtotal = document.querySelector('#Subtotal');
     subtotal.textContent = `$${subtotalValue}`;
   
     const itbmsValue = subtotalValue * 0.07;
-    const itbms = document.querySelector('#itbms');
+    const itbms = document.querySelector('#ITBMS');
     itbms.textContent = `$${itbmsValue}`;
   
     const totalValue = subtotalValue + itbmsValue;
-    const total = document.querySelector('#total');
+    const total = document.querySelector('#Total');
     total.textContent = `$${totalValue}`;
   }
 calcularTotal();
