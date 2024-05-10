@@ -50,13 +50,13 @@ header .navbar {
 }
 
 .sub- {
- display: flex;
+  display: flex;
   align-items: center;
 }
 
 .nav .nav-item {
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
   margin-right: 6rem;
 }
@@ -82,21 +82,28 @@ header .navbar {
     display: none;
   }
 
-  .total-container {
-    font-size: 14px;
+  .shop-box {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .625rem;
+    padding-bottom: .625rem;
   }
-
-  .shop-box .detail-box {
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+  .shop-box .detail-box{
+    display: block;
   }
-
   .shop-box .shop-img {
-    width: 60px;
-    height: 30px;
-    padding: 5px;
+    max-height: 4.875rem;
+    min-height: 4.875rem;
+    min-width: 4.875rem;
+    max-width: 4.875rem;
+  }
+  .shop-price::before{
+    content: "Precio:";
+    display: inline;
+  }
+  .cart-remove {
+    display: flex;
+    margin: none;
   }
 }
 
