@@ -90,7 +90,7 @@ function comprasProductos() {
                 <img class="shop-img" src="${item.img}" alt="${item.title}">
                 <div class="detail-box">
                     <div class="shop-product">${item.title}</div>
-                    <div class="shop-price">${item.price}</div>
+                    <div class="shop-price">$${item.price}</div>
                     Cantidad
                     <input type="number" value="${item.quantity}" placeholder="1" class="cart-quantity" data-id="${item.id}">
                 </div>
