@@ -143,18 +143,26 @@
         totalElement.textContent = total.toFixed(2); // Limita el total a 2 decimales
       }
   
+      // Función para eliminar un elemento del carrito
+      function removeItem(item) {
+        item.remove();
+        updateSummary(); // Actualiza el resumen después de eliminar un elemento
+      }
+  
       // Evento para actualizar el resumen cuando cambia la cantidad de un artículo en el carrito
       cartItems.forEach(item => {
         const quantityInput = item.querySelector(".cart-quantity");
-        quantityInput.addEventListener("change", updateSummary);
+        quantityInput.addEventListener("change", function() {
+          updateSummary(); // Actualiza el resumen después de cambiar la cantidad
+        });
       });
   
-      // Evento para actualizar el resumen cuando se elimina un artículo del carrito
+      // Evento para eliminar un artículo del carrito
       const removeButtons = document.querySelectorAll(".cart-remove");
       removeButtons.forEach(button => {
         button.addEventListener("click", function() {
-          button.parentElement.remove();
-          updateSummary();
+          const item = button.parentElement;
+          removeItem(item);
         });
       });
   
@@ -169,6 +177,7 @@
     });
   </script>
   
+
 
 </body>
 
