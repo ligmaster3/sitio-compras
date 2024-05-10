@@ -40,7 +40,6 @@ function mostrarProductos() {
         }
     }
 
-
 }
 
 function addToCart(event) {
@@ -83,6 +82,7 @@ function saveStorage() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+
 function comprasProductos() {
     if (shopItemlist) {
         shopItemlist.innerHTML = '';
@@ -107,12 +107,21 @@ function comprasProductos() {
     }
 
 }
-function calcularTotal (){
-    const totalCalculado = cart.reduce((acc,item) => acc + (item.price * item.quantity),0);
-    cartTotal.textContent = `$${totalCalculado}`;
+// Calculate subtotal, ITBMS, and total
+function calcularTotal() {
+    const subtotal = document.querySelector('#Subtotal');
+    const subtotalValue = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    subtotal.textContent = `$${subtotalValue}`;
+  
+    const itbms = document.querySelector('#ITBMS');
+    const itbmsValue = subtotalValue * 0.07; // 7% ITBMS
+    itbms.textContent = `$${itbmsValue}`;
+  
+    const total = document.querySelector('#Total');
+    const totalValue = subtotalValue + itbmsValue;
+    total.textContent = `$${totalValue}`;
 }
-
-
+calcularTotal();
 if (window.location.pathname.includes("compras.html")) {
     comprasProductos();
 } else {
