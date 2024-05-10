@@ -102,8 +102,7 @@ header .navbar {
     display: inline;
   }
   .cart-remove {
-    display: flex;
-    margin: none;
+    display: contents;
   }
 }
 
