@@ -91,7 +91,7 @@ function comprasProductos() {
                 <div class="detail-box">
                     <div class="shop-product">${item.title}</div>
                     <div class="shop-price">$${item.price}</div>
-                    Cantidad
+                    Cantidad 
                     <input type="number" value="${item.quantity}" placeholder="1" class="cart-quantity" data-id="${item.id}">
                 </div>
                 <i class="fa-solid fa-trash cart-remove" data-id="${item.id}"></i>
