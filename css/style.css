@@ -19,13 +19,16 @@ body {
 header .navbar {
   z-index: 1000;
   background-color: rgb(44, 233, 66);
+
   /* Color predeterminado */
   transition: background-color 0.3s ease;
+
   /* Agrega una transición suave */
 }
 
 .nav-color-change {
   background-color: #ce2c2c !important;
+
   /* Cambia el color del menú */
 }
 
@@ -61,19 +64,9 @@ header .navbar {
   margin-right: 6rem;
 }
 
-/* .wrap-hero-section {
-  position: relative;
-  margin: 0 auto;
-  padding: 3rem;
-  top: 600%;
-  right: 36%;
-}
-.wrap-hero-section h1 {
-  position: absolute;
-} */
 
 /* Responsive */
-@media (max-width: 998px) {
+@media (width <= 998px) {
   header {
     width: 100%;
   }
@@ -141,7 +134,7 @@ header .navbar {
   grid-template-columns: 16% 52% 25%;
   align-items: center;
   margin-top: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.427);
+  border-bottom: 1px solid rgb(255 255 255 / 42.7%);
   border-bottom: 1px solid gray;
   border: 1px solid #dee2e6;
 }
@@ -239,7 +232,7 @@ header .navbar {
 }
 
 /* Responsive */
-@media (max-width: 998px) {
+@media (width <= 998px) {
   header {
     width: 100%;
   }
@@ -249,10 +242,7 @@ header .navbar {
   }
 
   .shop-box {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .625rem;
-    padding-bottom: .625rem;
+    padding: .625rem 1rem;
   }
 
   .shop-box .detail-box {
@@ -274,6 +264,5 @@ header .navbar {
 
   .shop-box .cart-remove {
     margin-left: 50px;
-    /* display: contents; */
   }
 }
