@@ -18,18 +18,16 @@ body {
 
 header .navbar {
   z-index: 1000;
+   /* Color predeterminado */
   background-color: rgb(44, 233, 66);
-
-  /* Color predeterminado */
+ /* Agrega una transición suave */
   transition: background-color 0.3s ease;
-
-  /* Agrega una transición suave */
 }
 
 .nav-color-change {
-  background-color: #ce2c2c !important;
-
   /* Cambia el color del menú */
+background-color: #ce2c2c !important;
+  
 }
 
 
